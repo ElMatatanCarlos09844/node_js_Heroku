@@ -178,9 +178,35 @@ Despues en la carpeta de trabajo se pone
     heroku login
     git init 
     heroku git:remote -a express-prueba-carlos-cisneros
+    git add .                                               // agregar todo a la caja
+    git commit -am "make it better"                         // etiquetar todo lo agregadoa la caja
+    git push heroku master                                  // subir todo lo etiquetado al servidor de heroku
+
+Despues se hizo un camvio en la archivo app.js en el puerto se cambio por : "process.env.PORT || 3000;"
+y lo que hace es configurar una variable de entorno si el servidor no tiene la varibale puerto se da 
+el desginado en la misma instruccion el 3000
+
+Volvemos a 
+
     git add .
-    git commit -am "make it better"
+    git commit -m "Port has been updated to process.env.PORT || 3000;"         // -m es para mandar un mensaje
     git push heroku master
+
+Para vincular con GITHUB
+    // Este comnado es para que se vincule el proyecto con mi github personal
+    git remote add origin https://github.com/ElMatatanCarlos09844/node_js_Heroku.git
+    git log --oneline
+        
+        aa1cb91 (HEAD -> master, heroku/master) cambiamos el puerto
+        71e90bb make it better
+    
+    git branch -M master
+    git push -u origin master
+
+
+Aquí voy a hacer un cambio para probar los cambios
+    git add .
+    git commit -m "Hice un cambio en los comentarios"
 
 */
 
