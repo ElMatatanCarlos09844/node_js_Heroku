@@ -142,7 +142,7 @@ server.listen(puerto, () => {
 const express = require('express')
 //const { send } = require('express/lib/response')
 const app = express()
-const port = 3000
+const port = process.env.PORT || 3000;
 
 // Seteando motor de plantillas EJS 
 app.set('view engine', 'ejs')
@@ -180,7 +180,7 @@ Despues en la carpeta de trabajo se pone
     heroku git:remote -a express-prueba-carlos-cisneros
     git add .
     git commit -am "make it better"
-
+    git push heroku master
 
 */
 
